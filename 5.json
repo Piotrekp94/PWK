@@ -1,0 +1,43 @@
+﻿{
+  "Title": "Bohater wykopuje skarb",
+  "Title_Generic": "",
+  "Description": "Pojawia sie skarb rozpoczynajacy konflikt z piratem",
+  "L_Side": {
+    "Locations": [
+      {
+        "Name": "Island",
+        "Attributes": {},
+        "Characters": [
+          {
+            "Name": "Hero",
+            "Items": []
+          }
+        ],
+        "Items": []
+      }
+    ]
+  },
+  "R_Side": {},
+  "Instructions": [
+    {
+      "op": "move",
+      "node": "Pirate",
+      "to": "Island/Characters"
+    },
+    {
+      "op": "move",
+      "node": "Treasure",
+      "to": "Island/Items"
+    },
+    {
+      "op": "create",
+      "in": "Hero/Narration",
+      "node": {
+        "Name": "PirateQuestTreasureSubQuestActive",
+        "Attributes": {
+          "IsActive": true
+        }
+      }
+    }
+  ]
+}
