@@ -1,0 +1,45 @@
+﻿{
+  "Title": "Bohater odblokowuje wyspe",
+  "Title_Generic": "",
+  "Description": "Poniewaz bohater posiada lodz jest w stanie dostac sie na wyspe",
+  "L_Side": {
+    "Locations": [
+      {
+        "Id": "Everywhere",
+        "Attributes": {},
+        "Characters": [
+          {
+            "Name": "Hero",
+            "Items": [
+              {
+                "Name": "Boat",
+                "Attributes": {
+                }
+              }
+            ],
+            "Narration": [
+              {
+                "Name": "PirateQuestBoatSubQuestActive",
+                "Id": "PirateQuestBoatSubQuestActive",
+                "Attributes": {
+                  "IsActive": true
+                }
+              }
+            ]
+          }
+        ],
+        "Items": [],
+        "Connections": [
+        ]
+      }
+    ]
+  },
+  "R_Side": {},
+  "Instructions": [
+    {
+      "op": "move",
+      "node": "Locations/Island/",
+      "to": "Locations/Port/Connections/"
+    }
+  ]
+}
