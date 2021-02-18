@@ -1,0 +1,47 @@
+﻿{
+  "Title": "Bohater w jaksini spotyka potwora",
+  "Title_Generic": "",
+  "Description": "Bohater udaje sie do jaskini w celu odzyskania lodzi i spotyka potwora",
+  "L_Side": {
+    "Locations": [
+      {
+        "Name": "Cave",
+        "Attributes": {},
+        "Characters": [
+          {
+            "Name": "Hero",
+            "Items": [],
+            "Narration": [
+              {
+                "Name": "PirateQuestBoatSubQuestActive",
+                "Id": "PirateQuestBoatSubQuestActive",
+                "Attributes": {
+                  "IsActive": true
+                }
+              }
+            ]
+          }
+        ],
+        "Items": [],
+        "Connections": [
+          {
+            "Destination": "Forest"
+          }
+        ]
+      },
+      {
+        "Name": "Forest",
+        "Connections": [
+        ]
+      }
+    ]
+  },
+  "R_Side": {},
+  "Instructions": [
+    {
+      "op": "move",
+      "node": "Dragon",
+      "to": "Cave/Characters"
+    }
+  ]
+}
