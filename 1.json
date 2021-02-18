@@ -5,7 +5,7 @@
   "L_Side": {
     "Locations": [
       {
-        "Name": "Inn",
+        "Id": "Everywhere",
         "Attributes": {},
         "Characters": [
           {

@@ -1,0 +1,55 @@
+﻿{
+  "Title": "Hero przekonuje pirata ze pomoze mu w wyprawie jezeli posiada kompas",
+  "Title_Generic": "",
+  "Description": "Hero akceptuje misje poprzez przekonanie pirata ze ma wystarczajace wyposazenie do realizacji zadania",
+  "L_Side": {
+    "Locations": [
+      {
+        "Id": "Everywhere",
+        "Attributes": {},
+        "Characters": [
+          {
+            "Name": "Hero",
+            "Items": [
+              {
+                "Name": "Kompas",
+                "Attributes": {
+                }
+              }
+            ],
+            "Narration": [
+              {
+                "Name": "PirateQuestActive",
+                "Id": "PirateQuestActive",
+                "Attributes": {
+                  "IsActive": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Pirate",
+            "Attributes": {},
+            "Characters": [],
+            "Items": []
+          }
+        ],
+        "Items": [],
+        "Connections": []
+      }
+    ]
+  },
+  "R_Side": {},
+  "Instructions": [
+    {
+      "op": "create",
+      "in": "Hero/Narration",
+      "node": {
+        "Name": "PirateQuestBoatSubQuestActive",
+        "Attributes": {
+          "IsActive": true
+        }
+      }
+    }
+  ]
+}
