@@ -1,0 +1,45 @@
+﻿{
+  "Title": "Spotkanie Pirata w karczmie i propozycja wziecia udzialu w wyprawie",
+  "Title_Generic": "",
+  "Description": "Hero spotyka pirata który potrzebuje pomocy w znalezieniu skarbu",
+  "L_Side": {
+    "Locations": [
+      {
+        "Name": "Inn",
+        "Attributes": {},
+        "Characters": [
+          {
+            "Name": "Hero"
+          },
+          {
+            "Name": "Pirate",
+            "Attributes": {},
+            "Characters": [],
+            "Items": []
+          },
+          {
+            "Name": "Innkeeper",
+            "Attributes": {},
+            "Characters": [],
+            "Items": []
+          }
+        ],
+        "Items": [],
+        "Connections": []
+      }
+    ]
+  },
+  "R_Side": {},
+  "Instructions": [
+    {
+      "op": "create",
+      "in": "Hero/Narration",
+      "node": {
+        "Name": "PirateQuestActive",
+        "Attributes": {
+          "IsActive": true
+        }
+      }
+    }
+  ]
+}
