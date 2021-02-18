@@ -40,6 +40,16 @@
       "op": "move",
       "node": "Locations/Island/",
       "to": "Locations/Port/Connections/"
+    },
+    {
+      "op": "delete",
+      "in": "Hero/Narration",
+      "node": {
+        "Name": "PirateQuestBoatSubQuestActive",
+        "Attributes": {
+          "IsActive": true
+        }
+      }
     }
   ]
 }
