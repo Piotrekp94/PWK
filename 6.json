@@ -1,0 +1,51 @@
+{
+    "Title": "Bohater poddaje się",
+    "Title_Generic": "",
+    "Description": "Bohater kapituluje, oddając piratowi skarb.",
+    "L_Side": {
+      "Locations": [
+        {
+          "Name": "Island",
+          "Attributes": {},
+          "Characters": [
+            {
+              "Name": "Hero",
+              "Items": []
+            }
+          ],
+          "Items": []
+        }
+      ],
+      "Narration": [
+        {
+          "Name": "PirateQuestTreasureSubQuestActive",
+          "Id": "PirateQuestTreasureSubQuestActive",
+          "Attributes": {
+            "IsActive": true
+          }
+        }
+      ]
+    },
+    "R_Side": {},
+    "Instructions": [
+      {
+        "op": "move",
+        "node": "Hero",
+        "to": "Road/Characters"
+      },
+      {
+        "op": "delete",
+        "in": "Hero/Narration",
+        "node": {
+          "Name": "PirateQuestActive"
+        }
+      },
+      {
+        "op": "delete",
+        "in": "Hero/Narration",
+        "node": {
+          "Name": "PirateQuestTresureSubQuestActive"
+        }
+      }
+    ]
+  }

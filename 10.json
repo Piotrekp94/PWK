@@ -1,0 +1,62 @@
+{
+    "Title": "Dogadanie się z piratem",
+    "Title_Generic": "",
+    "Description": "Bohater dogaduje się z piratem i otrzymuje 50% skarbu.",
+    "L_Side": {
+        "Locations": [
+            {
+              "Name": "Island",
+              "Attributes": {},
+              "Characters": [
+                {
+                  "Name": "Hero",
+                  "Items": []
+                }
+              ],
+              "Items": []
+            }
+          ],
+          "Narration": [
+            {
+              "Name": "PirateQuestTreasureSubQuestActive",
+              "Id": "PirateQuestTreasureSubQuestActive",
+              "Attributes": {
+                "IsActive": true,
+                "Confrontation": true
+              }
+            }
+          ]     
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "move",
+            "node": "Treasure",
+            "to": "Characters/Hero/Items"
+        },
+        {
+            "op": "set",
+            "attribute": "Treasure.IsHalf",
+            "value": true
+        },
+        {
+            "op": "move",
+            "node": "Hero",
+            "to": "Road/Characters"
+        },
+        {
+            "op": "delete",
+            "in": "Hero/Narration",
+            "node": {
+                "Name": "PirateQuestActive"
+            }
+        },
+        {
+            "op": "delete",
+            "in": "Hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
+  }

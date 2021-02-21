@@ -1,0 +1,38 @@
+{
+    "Title": "Bohater konfrontuje się z piratem",
+    "Title_Generic": "",
+    "Description": "Bohater zamiast poddać się, wybiera konfrontację z piratem",
+    "L_Side": {
+        "Locations": [
+            {
+              "Name": "Island",
+              "Attributes": {},
+              "Characters": [
+                {
+                  "Name": "Hero",
+                  "Items": []
+                }
+              ],
+              "Items": []
+            }
+          ],
+          "Narration": [
+            {
+              "Name": "PirateQuestTreasureSubQuestActive",
+              "Id": "PirateQuestTreasureSubQuestActive",
+              "Attributes": {
+                "IsActive": true
+              }
+            }
+          ]     
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+          "op": "set",
+          "in": "Hero/Narration",
+          "attribute": "PirateQuestTresureSubQuestActive.Confrontation",
+          "value": true
+        }
+    ]
+  }
