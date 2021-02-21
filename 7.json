@@ -7,7 +7,7 @@
             {
               "Name": "Island",
               "Attributes": {},
-              "Characters": [
+              "Characters": [ // Dopisac pirata
                 {
                   "Name": "Hero",
                   "Items": []
@@ -31,7 +31,7 @@
         {
           "op": "set",
           "in": "Hero/Narration",
-          "attribute": "PirateQuestTresureSubQuestActive.Confrontation",
+          "attribute": "PirateQuestTresureSubQuestActive.Confrontation", //zmienic na knowledge
           "value": true
         }
     ]

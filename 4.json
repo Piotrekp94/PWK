@@ -37,9 +37,7 @@
   "R_Side": {},
   "Instructions": [
     {
-      "op": "move",
-      "node": "Locations/Island/",
-      "to": "Locations/Port/Connections/"
+      "comment": "jak dodaje sie polaczenia pomiedzy lokacjami"
     },
     {
       "op": "delete",

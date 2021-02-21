@@ -47,7 +47,7 @@
       "node": {
         "Name": "PirateQuestBoatSubQuestActive",
         "Attributes": {
-          "IsActive": true
+          "IsActive": true // Change to knowledge and describe how to get boat
         }
       }
     }

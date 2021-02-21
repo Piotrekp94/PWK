@@ -7,7 +7,7 @@
             {
               "Name": "Island",
               "Attributes": {},
-              "Characters": [
+              "Characters": [ // Dodac pirata
                 {
                   "Name": "Hero",
                   "Items": []
@@ -22,7 +22,7 @@
               "Id": "PirateQuestTreasureSubQuestActive",
               "Attributes": {
                 "IsActive": true,
-                "Confrontation": true
+                "Confrontation": true 
               }
             }
           ]     
@@ -33,7 +33,7 @@
             "op": "move",
             "node": "Treasure",
             "to": "Characters/Hero/Items"
-        },
+        }, //TODO: Skarb podniesc w produkcji generycznej
         {
             "op": "delete",
             "node": "Pirate"
@@ -42,7 +42,7 @@
             "op": "move",
             "node": "Hero",
             "to": "Road/Characters"
-        },
+        }, //TODO: Rozwazyc nie przesuwanie bohatera
         {
             "op": "delete",
             "in": "Hero/Narration",

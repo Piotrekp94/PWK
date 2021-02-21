@@ -1,6 +1,6 @@
 ﻿{
   "Title": "Bohater wykopuje skarb",
-  "Title_Generic": "",
+  "Title_Generic": "Stworzyc produkcje generyczna ktora zamienia wezel naaracyjny na stworzenie przedmiotu potrzebnego w misji",
   "Description": "Pojawia sie skarb rozpoczynajacy konflikt z piratem",
   "L_Side": {
     "Locations": [
@@ -20,12 +20,12 @@
   "R_Side": {},
   "Instructions": [
     {
-      "op": "move",
+      "op": "create",
       "node": "Pirate",
       "to": "Island/Characters"
     },
     {
-      "op": "move",
+      "op": "create",
       "node": "Treasure",
       "to": "Island/Items"
     },
@@ -35,7 +35,7 @@
       "node": {
         "Name": "PirateQuestTreasureSubQuestActive",
         "Attributes": {
-          "IsActive": true
+          "IsActive": true // zmienic na knowledge z opisem
         }
       }
     }

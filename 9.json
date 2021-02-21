@@ -1,5 +1,5 @@
 {
-    "Title": "Porwanie papugi",
+    "Title": "Porwanie papugi", //TODO: podzielic ta produkcje na 2, kradziez papugi a pozniej wymiana papugi na skarb  
     "Title_Generic": "",
     "Description": "Bohater porywa papugę Zosię i jako okup otrzymuje 100% skarbu",
     "L_Side": {
@@ -38,7 +38,7 @@
             "op": "move",
             "node": "Parrot",
             "to": "Characters/Hero/Items"
-        },
+        }, //TODO: usunac papuge
         {
             "op": "move",
             "node": "Hero",

@@ -7,7 +7,7 @@
         {
           "Name": "Island",
           "Attributes": {},
-          "Characters": [
+          "Characters": [ // Dopisac pirata
             {
               "Name": "Hero",
               "Items": []
