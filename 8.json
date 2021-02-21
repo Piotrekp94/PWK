@@ -1,0 +1,61 @@
+{
+    "Title": "Zabicie pirata",
+    "Title_Generic": "",
+    "Description": "Bohater zabija pirata i otrzymuje 100% skarbu.",
+    "L_Side": {
+        "Locations": [
+            {
+              "Name": "Island",
+              "Attributes": {},
+              "Characters": [
+                {
+                  "Name": "Hero",
+                  "Items": []
+                }
+              ],
+              "Items": []
+            }
+          ],
+          "Narration": [
+            {
+              "Name": "PirateQuestTreasureSubQuestActive",
+              "Id": "PirateQuestTreasureSubQuestActive",
+              "Attributes": {
+                "IsActive": true,
+                "Confrontation": true
+              }
+            }
+          ]     
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "move",
+            "node": "Treasure",
+            "to": "Characters/Hero/Items"
+        },
+        {
+            "op": "delete",
+            "node": "Pirate"
+        },
+        {
+            "op": "move",
+            "node": "Hero",
+            "to": "Road/Characters"
+        },
+        {
+            "op": "delete",
+            "in": "Hero/Narration",
+            "node": {
+                "Name": "PirateQuestActive"
+            }
+        },
+        {
+            "op": "delete",
+            "in": "Hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
+  }

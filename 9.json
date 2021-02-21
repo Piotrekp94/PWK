@@ -1,0 +1,62 @@
+{
+    "Title": "Porwanie papugi",
+    "Title_Generic": "",
+    "Description": "Bohater porywa papugę Zosię i jako okup otrzymuje 100% skarbu",
+    "L_Side": {
+        "Locations": [
+            {
+              "Name": "Island",
+              "Attributes": {},
+              "Characters": [
+                {
+                  "Name": "Hero",
+                  "Items": []
+                }
+              ],
+              "Items": []
+            }
+          ],
+          "Narration": [
+            {
+              "Name": "PirateQuestTreasureSubQuestActive",
+              "Id": "PirateQuestTreasureSubQuestActive",
+              "Attributes": {
+                "IsActive": true,
+                "Confrontation": true
+              }
+            }
+          ]     
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "move",
+            "node": "Treasure",
+            "to": "Characters/Hero/Items"
+        },
+        {
+            "op": "move",
+            "node": "Parrot",
+            "to": "Characters/Hero/Items"
+        },
+        {
+            "op": "move",
+            "node": "Hero",
+            "to": "Road/Characters"
+        },
+        {
+            "op": "delete",
+            "in": "Hero/Narration",
+            "node": {
+                "Name": "PirateQuestActive"
+            }
+        },
+        {
+            "op": "delete",
+            "in": "Hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
+  }
