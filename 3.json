@@ -30,14 +30,17 @@
     "Instructions": [
         {
             "op": "create",
-            // sprawdzic skladnie
-            "node": "Dragon",
-            "to": "Cave/Characters"
+            "in": "Cave/Characters",
+            "node": {
+                "Name": "Dragon"
+            }
         },
         {
             "op": "create",
-            "node": "Boat",
-            "to": "Cave/Items"
+            "in": "Cave/Items",
+            "node": {
+                "Name": "Boat"
+            }
         }
     ]
 }

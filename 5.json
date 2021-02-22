@@ -21,13 +21,15 @@
     "Instructions": [
         {
             "op": "create",
-            "node": "Pirate",
-            "to": "Island/Characters"
+            "in": "Island/Items",
+            "node": {
+                "Name": "Treasure"
+            }
         },
         {
-            "op": "create",
-            "node": "Treasure",
-            "to": "Island/Items"
+            "op": "move",
+            "node": "Pirate",
+            "to": "Island/Characters"
         },
         {
             "op": "create",
@@ -35,8 +37,8 @@
             "node": {
                 "Name": "PirateQuestTreasureSubQuestActive",
                 "Attributes": {
-                    "IsActive": true
-                    // zmienic na knowledge z opisem
+                    "IsActive": true,
+                    "Knowledge": "Odnajdz skarb na wyspie"
                 }
             }
         }

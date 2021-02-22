@@ -37,7 +37,7 @@
     "R_Side": {},
     "Instructions": [
         {
-            "comment": "jak dodaje sie polaczenia pomiedzy lokacjami"
+            "comment": "Jak dodaje sie polaczenia pomiedzy lokacjami"
         },
         {
             "op": "delete",
