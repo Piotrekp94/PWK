@@ -7,9 +7,13 @@
             {
               "Name": "Island",
               "Attributes": {},
-              "Characters": [ // Dodac pirata
+              "Characters": [
                 {
-                  "Name": "Hero",
+                  "Name": "Main_Hero",
+                  "Items": []
+                },
+                {
+                  "Name": "Pirate",
                   "Items": []
                 }
               ],
@@ -22,7 +26,7 @@
               "Id": "PirateQuestTreasureSubQuestActive",
               "Attributes": {
                 "IsActive": true,
-                "Confrontation": true 
+                "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
               }
             }
           ]     
@@ -30,29 +34,19 @@
     "R_Side": {},
     "Instructions": [
         {
-            "op": "move",
-            "node": "Treasure",
-            "to": "Characters/Hero/Items"
-        }, //TODO: Skarb podniesc w produkcji generycznej
-        {
             "op": "delete",
             "node": "Pirate"
         },
         {
-            "op": "move",
-            "node": "Hero",
-            "to": "Road/Characters"
-        }, //TODO: Rozwazyc nie przesuwanie bohatera
-        {
             "op": "delete",
-            "in": "Hero/Narration",
+            "in": "Main_Hero/Narration",
             "node": {
                 "Name": "PirateQuestActive"
             }
         },
         {
             "op": "delete",
-            "in": "Hero/Narration",
+            "in": "Main_Hero/Narration",
             "node": {
                 "Name": "PirateQuestTresureSubQuestActive"
             }

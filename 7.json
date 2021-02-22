@@ -7,9 +7,13 @@
             {
               "Name": "Island",
               "Attributes": {},
-              "Characters": [ // Dopisac pirata
+              "Characters": [
                 {
-                  "Name": "Hero",
+                  "Name": "Main_Hero",
+                  "Items": []
+                },
+                {
+                  "Name": "Pirate",
                   "Items": []
                 }
               ],
@@ -30,9 +34,9 @@
     "Instructions": [
         {
           "op": "set",
-          "in": "Hero/Narration",
-          "attribute": "PirateQuestTresureSubQuestActive.Confrontation", //zmienic na knowledge
-          "value": true
+          "in": "Main_Hero/Narration",
+          "attribute": "PirateQuestTresureSubQuestActive.Knowledge",
+          "value": "Pirat chce zabrać cały skarb dla siebie"
         }
     ]
   }
