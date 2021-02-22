@@ -1,0 +1,34 @@
+﻿{
+    "Title": "Stworzenie obiektu z wiedzy fabularnej",
+    "Title_Generic": "",
+    "L_Side": {
+        "Locations": [
+            {
+                "Id": "Everywhere",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Id": "AnyHero",
+                        "Items": [],
+                        "Narration": [
+                            {
+                                "Id": "AnyQuest"
+                            }
+                        ]
+                    }
+                ],
+                "Items": []
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "in": "Everywhere/Items",
+            "node": {
+                "Id": "Something"
+            }
+        }
+    ]
+}

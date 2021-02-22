@@ -1,7 +1,7 @@
 ﻿{
     "Title": "Bohater wykopuje skarb",
-    "Title_Generic": "Stworzyc produkcje generyczna ktora zamienia wezel naaracyjny na stworzenie przedmiotu potrzebnego w misji",
-    "Description": "Pojawia sie skarb rozpoczynajacy konflikt z piratem",
+    "Title_Generic": "Stworzenie obiektu z wiedzy fabularnej",
+    "Description": "Na wyspie pojawia sie skarb i pirat",
     "L_Side": {
         "Locations": [
             {
