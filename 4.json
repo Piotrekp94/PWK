@@ -9,7 +9,7 @@
         "Attributes": {},
         "Characters": [
           {
-            "Name": "Hero",
+            "Name": "Main_hero",
             "Items": [
               {
                 "Name": "Boat",
@@ -41,7 +41,7 @@
     },
     {
       "op": "delete",
-      "in": "Hero/Narration",
+      "in": "Main_hero/Narration",
       "node": {
         "Name": "PirateQuestBoatSubQuestActive",
         "Attributes": {

@@ -9,7 +9,7 @@
               "Attributes": {},
               "Characters": [
                 {
-                  "Name": "Main_Hero",
+                  "Name": "Main_hero",
                   "Items": []
                 },
                 {
@@ -34,7 +34,7 @@
     "Instructions": [
         {
           "op": "set",
-          "in": "Main_Hero/Narration",
+          "in": "Main_hero/Narration",
           "attribute": "PirateQuestTresureSubQuestActive.Knowledge",
           "value": "Pirat chce zabrać cały skarb dla siebie"
         }

@@ -9,7 +9,7 @@
         "Attributes": {},
         "Characters": [
           {
-            "Name": "Hero",
+            "Name": "Main_hero",
             "Items": []
           }
         ],
@@ -31,7 +31,7 @@
     },
     {
       "op": "create",
-      "in": "Hero/Narration",
+      "in": "Main_hero/Narration",
       "node": {
         "Name": "PirateQuestTreasureSubQuestActive",
         "Attributes": {

@@ -9,7 +9,7 @@
             "Attributes": {},
             "Characters": [
               {
-                "Name": "Main_Hero",
+                "Name": "Main_hero",
                 "Items": []
               },
               {
@@ -45,19 +45,19 @@
       },
       {
         "op": "add",
-        "attribute": "Main_Hero.Money",
+        "attribute": "Main_hero.Money",
         "value": 5
       },
       {
           "op": "delete",
-          "in": "Main_Hero/Narration",
+          "in": "Main_hero/Narration",
           "node": {
               "Name": "PirateQuestActive"
           }
       },
       {
           "op": "delete",
-          "in": "Main_Hero/Narration",
+          "in": "Main_hero/Narration",
           "node": {
               "Name": "PirateQuestTresureSubQuestActive"
           }
