@@ -1,7 +1,7 @@
 {
-    "Title": "Wymiana papugi na skarb",
+    "Title": "Pirat zabija gracza",
     "Title_Generic": "",
-    "Description": "Bohater wymienia porwaną papugę Zosię i jako okup otrzymuje 100% skarbu",
+    "Description": "Pirat zabija gracza i otrzymuje 100% skarbu.",
     "L_Side": {
         "Locations": [
             {
@@ -10,11 +10,7 @@
               "Characters": [
                 {
                   "Name": "Main_Hero",
-                  "Items": [
-                    {
-                      "Id": "Parrot"
-                    }
-                  ]
+                  "Items": []
                 },
                 {
                   "Name": "Pirate",
@@ -33,14 +29,13 @@
                 "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
               }
             }
-          ]
+          ]     
     },
     "R_Side": {},
     "Instructions": [
         {
-            "op": "move",
-            "node": "Parrot",
-            "to": "Characters/Pirate/Items"
+            "op": "delete",
+            "node": "Main_Hero"
         },
         {
             "op": "delete",

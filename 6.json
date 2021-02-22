@@ -7,9 +7,13 @@
         {
           "Name": "Island",
           "Attributes": {},
-          "Characters": [ // Dopisac pirata
+          "Characters": [
             {
-              "Name": "Hero",
+              "Name": "Main_Hero",
+              "Items": []
+            },
+            {
+              "Name": "Pirate",
               "Items": []
             }
           ],
@@ -29,20 +33,15 @@
     "R_Side": {},
     "Instructions": [
       {
-        "op": "move",
-        "node": "Hero",
-        "to": "Road/Characters"
-      },
-      {
         "op": "delete",
-        "in": "Hero/Narration",
+        "in": "Main_Hero/Narration",
         "node": {
           "Name": "PirateQuestActive"
         }
       },
       {
         "op": "delete",
-        "in": "Hero/Narration",
+        "in": "Main_Hero/Narration",
         "node": {
           "Name": "PirateQuestTresureSubQuestActive"
         }
