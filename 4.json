@@ -1,53 +1,53 @@
 ﻿{
-  "Title": "Bohater odblokowuje wyspe",
-  "Title_Generic": "",
-  "Description": "Poniewaz bohater posiada lodz jest w stanie dostac sie na wyspe",
-  "L_Side": {
-    "Locations": [
-      {
-        "Id": "Everywhere",
-        "Attributes": {},
-        "Characters": [
-          {
-            "Name": "Main_hero",
-            "Items": [
-              {
-                "Name": "Boat",
-                "Attributes": {
-                }
-              }
-            ],
-            "Narration": [
-              {
-                "Name": "PirateQuestBoatSubQuestActive",
-                "Id": "PirateQuestBoatSubQuestActive",
-                "Attributes": {
-                  "IsActive": true
-                }
-              }
-            ]
-          }
-        ],
-        "Items": [],
-        "Connections": [
+    "Title": "Bohater odblokowuje wyspe",
+    "Title_Generic": "",
+    "Description": "Poniewaz bohater posiada lodz jest w stanie dostac sie na wyspe",
+    "L_Side": {
+        "Locations": [
+            {
+                "Id": "Everywhere",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": [
+                            {
+                                "Name": "Boat",
+                                "Attributes": {
+                                }
+                            }
+                        ],
+                        "Narration": [
+                            {
+                                "Name": "PirateQuestBoatSubQuestActive",
+                                "Id": "PirateQuestBoatSubQuestActive",
+                                "Attributes": {
+                                    "IsActive": true
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "Items": [],
+                "Connections": [
+                ]
+            }
         ]
-      }
-    ]
-  },
-  "R_Side": {},
-  "Instructions": [
-    {
-      "comment": "jak dodaje sie polaczenia pomiedzy lokacjami"
     },
-    {
-      "op": "delete",
-      "in": "Main_hero/Narration",
-      "node": {
-        "Name": "PirateQuestBoatSubQuestActive",
-        "Attributes": {
-          "IsActive": true
+    "R_Side": {},
+    "Instructions": [
+        {
+            "comment": "jak dodaje sie polaczenia pomiedzy lokacjami"
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestBoatSubQuestActive",
+                "Attributes": {
+                    "IsActive": true
+                }
+            }
         }
-      }
-    }
-  ]
+    ]
 }

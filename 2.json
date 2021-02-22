@@ -1,55 +1,64 @@
 ﻿{
-  "Title": "Main_hero przekonuje pirata ze pomoze mu w wyprawie jezeli posiada kompas",
-  "Title_Generic": "",
-  "Description": "Main_hero akceptuje misje poprzez przekonanie pirata ze ma wystarczajace wyposazenie do realizacji zadania",
-  "L_Side": {
-    "Locations": [
-      {
-        "Id": "Everywhere",
-        "Attributes": {},
-        "Characters": [
-          {
-            "Name": "Main_hero",
-            "Items": [
-              {
-                "Name": "Kompas",
+    "Title": "Main_hero przekonuje pirata ze pomoze mu w wyprawie jezeli posiada kompas",
+    "Title_Generic": "",
+    "Description": "Main_hero akceptuje misje poprzez przekonanie pirata ze ma wystarczajace wyposazenie do realizacji zadania",
+    "L_Side": {
+        "Locations": [
+            {
+                "Id": "Everywhere",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": [
+                            {
+                                "Name": "Kompas",
+                                "Attributes": {
+                                }
+                            }
+                        ],
+                        "Narration": [
+                            {
+                                "Name": "PirateQuestStartActive",
+                                "Id": "PirateQuestStartActive",
+                                "Attributes": {
+                                    "IsActive": true,
+                                    "Knowledge": "Pirat potrzebuje kogoś do odnalezienia skarbu, możesz go przekonac za pomoca kompasu"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Attributes": {},
+                        "Characters": [],
+                        "Items": []
+                    }
+                ],
+                "Items": [],
+                "Connections": []
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestBoatSubQuestActive",
                 "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat poprosił Cie o odnalezienie łodzi w jaskinii"
                 }
-              }
-            ],
-            "Narration": [
-              {
-                "Name": "PirateQuestActive",
-                "Id": "PirateQuestActive",
-                "Attributes": {
-                  "IsActive": true
-                }
-              }
-            ]
-          },
-          {
-            "Name": "Pirate",
-            "Attributes": {},
-            "Characters": [],
-            "Items": []
-          }
-        ],
-        "Items": [],
-        "Connections": []
-      }
-    ]
-  },
-  "R_Side": {},
-  "Instructions": [
-    {
-      "op": "create",
-      "in": "Main_hero/Narration",
-      "node": {
-        "Name": "PirateQuestBoatSubQuestActive",
-        "Attributes": {
-          "IsActive": true // Change to knowledge and describe how to get boat
+            }
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestStartActive"
+            }
         }
-      }
-    }
-  ]
+    ]
 }

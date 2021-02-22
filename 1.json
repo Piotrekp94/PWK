@@ -1,39 +1,40 @@
 ﻿{
-  "Title": "Spotkanie Pirata w karczmie i propozycja wziecia udzialu w wyprawie",
-  "Title_Generic": "Pozyskanie wiedzy fabularnej",
-  "Description": "Main_hero spotyka pirata który potrzebuje pomocy w znalezieniu skarbu",
-  "L_Side": {
-    "Locations": [
-      {
-        "Id": "Everywhere",
-        "Attributes": {},
-        "Characters": [
-          {
-            "Name": "Main_hero" //Main_hero
-          },
-          {
-            "Name": "Pirate",
-            "Attributes": {},
-            "Characters": [],
-            "Items": []
-          }
-        ],
-        "Items": [],
-        "Connections": []
-      }
-    ]
-  },
-  "R_Side": {},
-  "Instructions": [
-    {
-      "op": "create",
-      "in": "Main_hero/Narration", //
-      "node": {
-        "Name": "PirateQuestActive",
-        "Attributes": {
-          "IsActive": true
+    "Title": "Spotkanie Pirata w karczmie i propozycja wziecia udzialu w wyprawie",
+    "Title_Generic": "Pozyskanie wiedzy fabularnej",
+    "Description": "Main_hero spotyka pirata który potrzebuje pomocy w znalezieniu skarbu",
+    "L_Side": {
+        "Locations": [
+            {
+                "Id": "Everywhere",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero"
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Attributes": {},
+                        "Characters": [],
+                        "Items": []
+                    }
+                ],
+                "Items": [],
+                "Connections": []
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestStartActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat potrzebuje kogoś do odnalezienia skarbu, możesz go przekonac za pomoca kompasu"
+                }
+            }
         }
-      }
-    }
-  ]
+    ]
 }

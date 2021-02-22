@@ -5,35 +5,35 @@
     "L_Side": {
         "Locations": [
             {
-              "Name": "Island",
-              "Attributes": {},
-              "Characters": [
-                {
-                  "Name": "Main_hero",
-                  "Items": [
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
                     {
-                      "Id": "Parrot"
+                        "Name": "Main_hero",
+                        "Items": [
+                            {
+                                "Id": "Parrot"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
                     }
-                  ]
-                },
-                {
-                  "Name": "Pirate",
-                  "Items": []
-                }
-              ],
-              "Items": []
+                ],
+                "Items": []
             }
-          ],
-          "Narration": [
+        ],
+        "Narration": [
             {
-              "Name": "PirateQuestTreasureSubQuestActive",
-              "Id": "PirateQuestTreasureSubQuestActive",
-              "Attributes": {
-                "IsActive": true,
-                "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
-              }
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
+                }
             }
-          ]
+        ]
     },
     "R_Side": {},
     "Instructions": [
@@ -46,15 +46,8 @@
             "op": "delete",
             "in": "Main_hero/Narration",
             "node": {
-                "Name": "PirateQuestActive"
-            }
-        },
-        {
-            "op": "delete",
-            "in": "Main_hero/Narration",
-            "node": {
                 "Name": "PirateQuestTresureSubQuestActive"
             }
         }
     ]
-  }
+}

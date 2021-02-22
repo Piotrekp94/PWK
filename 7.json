@@ -5,38 +5,38 @@
     "L_Side": {
         "Locations": [
             {
-              "Name": "Island",
-              "Attributes": {},
-              "Characters": [
-                {
-                  "Name": "Main_hero",
-                  "Items": []
-                },
-                {
-                  "Name": "Pirate",
-                  "Items": []
-                }
-              ],
-              "Items": []
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
+                "Items": []
             }
-          ],
-          "Narration": [
+        ],
+        "Narration": [
             {
-              "Name": "PirateQuestTreasureSubQuestActive",
-              "Id": "PirateQuestTreasureSubQuestActive",
-              "Attributes": {
-                "IsActive": true
-              }
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true
+                }
             }
-          ]     
+        ]
     },
     "R_Side": {},
     "Instructions": [
         {
-          "op": "set",
-          "in": "Main_hero/Narration",
-          "attribute": "PirateQuestTresureSubQuestActive.Knowledge",
-          "value": "Pirat chce zabrać cały skarb dla siebie"
+            "op": "set",
+            "in": "Main_hero/Narration",
+            "attribute": "PirateQuestTresureSubQuestActive.Knowledge",
+            "value": "Pirat chce zabrać cały skarb dla siebie"
         }
     ]
-  }
+}

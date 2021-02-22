@@ -3,48 +3,41 @@
     "Title_Generic": "",
     "Description": "Bohater kapituluje, oddając piratowi skarb.",
     "L_Side": {
-      "Locations": [
-        {
-          "Name": "Island",
-          "Attributes": {},
-          "Characters": [
+        "Locations": [
             {
-              "Name": "Main_hero",
-              "Items": []
-            },
-            {
-              "Name": "Pirate",
-              "Items": []
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
+                "Items": []
             }
-          ],
-          "Items": []
-        }
-      ],
-      "Narration": [
-        {
-          "Name": "PirateQuestTreasureSubQuestActive",
-          "Id": "PirateQuestTreasureSubQuestActive",
-          "Attributes": {
-            "IsActive": true
-          }
-        }
-      ]
+        ],
+        "Narration": [
+            {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true
+                }
+            }
+        ]
     },
     "R_Side": {},
     "Instructions": [
-      {
-        "op": "delete",
-        "in": "Main_hero/Narration",
-        "node": {
-          "Name": "PirateQuestActive"
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
         }
-      },
-      {
-        "op": "delete",
-        "in": "Main_hero/Narration",
-        "node": {
-          "Name": "PirateQuestTresureSubQuestActive"
-        }
-      }
     ]
-  }
+}

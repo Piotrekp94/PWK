@@ -1,66 +1,59 @@
 {
-  "Title": "Dogadanie się z piratem",
-  "Title_Generic": "",
-  "Description": "Bohater dogaduje się z piratem i otrzymuje 50% skarbu.",
-  "L_Side": {
-      "Locations": [
-          {
-            "Name": "Island",
-            "Attributes": {},
-            "Characters": [
-              {
-                "Name": "Main_hero",
+    "Title": "Dogadanie się z piratem",
+    "Title_Generic": "",
+    "Description": "Bohater dogaduje się z piratem i otrzymuje 50% skarbu.",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
                 "Items": []
-              },
-              {
-                "Name": "Pirate",
-                "Items": []
-              }
-            ],
-            "Items": []
-          }
+            }
         ],
         "Narration": [
-          {
-            "Name": "PirateQuestTreasureSubQuestActive",
-            "Id": "PirateQuestTreasureSubQuestActive",
-            "Attributes": {
-              "IsActive": true,
-              "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
+            {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
+                }
             }
-          }
-        ]     
-  },
-  "R_Side": {},
-  "Instructions": [
-      {
-          "op": "set",
-          "attribute": "Treasure.coins",
-          "value": 0
-      },
-      {
-        "op": "add",
-        "attribute": "Pirate.Money",
-        "value": 5
-      },
-      {
-        "op": "add",
-        "attribute": "Main_hero.Money",
-        "value": 5
-      },
-      {
-          "op": "delete",
-          "in": "Main_hero/Narration",
-          "node": {
-              "Name": "PirateQuestActive"
-          }
-      },
-      {
-          "op": "delete",
-          "in": "Main_hero/Narration",
-          "node": {
-              "Name": "PirateQuestTresureSubQuestActive"
-          }
-      }
-  ]
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "set",
+            "attribute": "Treasure.coins",
+            "value": 0
+        },
+        {
+            "op": "add",
+            "attribute": "Pirate.Money",
+            "value": 5
+        },
+        {
+            "op": "add",
+            "attribute": "Main_hero.Money",
+            "value": 5
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
 }

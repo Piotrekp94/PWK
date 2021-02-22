@@ -1,43 +1,44 @@
 ﻿{
-  "Title": "Bohater wykopuje skarb",
-  "Title_Generic": "Stworzyc produkcje generyczna ktora zamienia wezel naaracyjny na stworzenie przedmiotu potrzebnego w misji",
-  "Description": "Pojawia sie skarb rozpoczynajacy konflikt z piratem",
-  "L_Side": {
-    "Locations": [
-      {
-        "Name": "Island",
-        "Attributes": {},
-        "Characters": [
-          {
-            "Name": "Main_hero",
-            "Items": []
-          }
-        ],
-        "Items": []
-      }
-    ]
-  },
-  "R_Side": {},
-  "Instructions": [
-    {
-      "op": "create",
-      "node": "Pirate",
-      "to": "Island/Characters"
+    "Title": "Bohater wykopuje skarb",
+    "Title_Generic": "Stworzyc produkcje generyczna ktora zamienia wezel naaracyjny na stworzenie przedmiotu potrzebnego w misji",
+    "Description": "Pojawia sie skarb rozpoczynajacy konflikt z piratem",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    }
+                ],
+                "Items": []
+            }
+        ]
     },
-    {
-      "op": "create",
-      "node": "Treasure",
-      "to": "Island/Items"
-    },
-    {
-      "op": "create",
-      "in": "Main_hero/Narration",
-      "node": {
-        "Name": "PirateQuestTreasureSubQuestActive",
-        "Attributes": {
-          "IsActive": true // zmienic na knowledge z opisem
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "node": "Pirate",
+            "to": "Island/Characters"
+        },
+        {
+            "op": "create",
+            "node": "Treasure",
+            "to": "Island/Items"
+        },
+        {
+            "op": "create",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true
+                    // zmienic na knowledge z opisem
+                }
+            }
         }
-      }
-    }
-  ]
+    ]
 }

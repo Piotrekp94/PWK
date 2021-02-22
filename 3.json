@@ -1,43 +1,43 @@
 ﻿{
-  "Title": "Bohater w jaskini spotyka potwora",
-  "Title_Generic": "Stworzyc produkcje generyczna ktora zamienia wezel naaracyjny na stworzenie przedmiotu potrzebnego w misji",
-  "Description": "Pojawienie sie bohatera tworzy smoka i łódź w jaskinii.",
-  "L_Side": {
-    "Locations": [
-      {
-        "Name": "Cave",
-        "Attributes": {},
-        "Characters": [
-          {
-            "Name": "Main_hero",
-            "Items": [],
-            "Narration": [
-              {
-                "Name": "PirateQuestBoatSubQuestActive",
-                "Id": "PirateQuestBoatSubQuestActive",
-                "Attributes": {
-                  "IsActive": true
-                }
-              }
-            ]
-          }
-        ],
-        "Items": []
-      }
-    ]
-  },
-  "R_Side": {},
-  "Instructions": [
-    {
-      "op": "create",
-      // sprawdzic skladnie
-      "node": "Dragon",
-      "to": "Cave/Characters"
+    "Title": "Bohater w jaskini spotyka potwora",
+    "Title_Generic": "Stworzyc produkcje generyczna ktora zamienia wezel naaracyjny na stworzenie przedmiotu potrzebnego w misji",
+    "Description": "Pojawienie sie bohatera tworzy smoka i łódź w jaskinii.",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Cave",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": [],
+                        "Narration": [
+                            {
+                                "Name": "PirateQuestBoatSubQuestActive",
+                                "Id": "PirateQuestBoatSubQuestActive",
+                                "Attributes": {
+                                    "IsActive": true
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "Items": []
+            }
+        ]
     },
-    {
-      "op": "create",
-      "node": "Boat",
-      "to": "Cave/Items"
-    }
-  ]
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            // sprawdzic skladnie
+            "node": "Dragon",
+            "to": "Cave/Characters"
+        },
+        {
+            "op": "create",
+            "node": "Boat",
+            "to": "Cave/Items"
+        }
+    ]
 }
