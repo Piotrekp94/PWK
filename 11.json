@@ -1,7 +1,7 @@
 {
-    "Title": "Pirat zabija gracza",
-    "Title_Generic": "",
-    "Description": "Pirat zabija gracza i otrzymuje 100% skarbu.",
+    "Title": "Zabicie bohatera przez pirata / Killing of the hero by the pirate",
+    "Title_Generic": "Walka (śmierć atakującego)",
+    "Description": "Pirat zabija bohatera i otrzymuje 100% skarbu.",
     "L_Side": {
         "Locations": [
             {

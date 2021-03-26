@@ -1,0 +1,578 @@
+[
+  {
+    "Title": "Stworzenie obiektu z wiedzy fabularnej / Creation of an object from knowledge",
+    "Title_Generic": "",
+    "L_Side": {
+        "Locations": [
+            {
+                "Id": "Everywhere",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Id": "AnyHero",
+                        "Items": [],
+                        "Narration": [
+                            {
+                                "Id": "AnyQuest"
+                            }
+                        ]
+                    }
+                ],
+                "Items": []
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "in": "Everywhere/Items",
+            "node": {
+                "Id": "Something"
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Spotkanie Pirata w karczmie i propozycja wziecia udzialu w wyprawie / Meeting Pirate in the tavern and a proposition of taking part in an adventure",
+    "Title_Generic": "Pozyskanie wiedzy fabularnej",
+    "Description": "Main_hero spotyka pirata który potrzebuje pomocy w znalezieniu skarbu",
+    "L_Side": {
+        "Locations": [
+            {
+                "Id": "Everywhere",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero"
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Attributes": {},
+                        "Characters": [],
+                        "Items": []
+                    }
+                ],
+                "Items": [],
+                "Connections": []
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestStartActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat potrzebuje kogoś do odnalezienia skarbu, możesz go przekonac za pomoca kompasu"
+                }
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Przekonanie pirata żeby pomógł Main_hero w wyprawie jeżeli posiada kompas / Convincing the pirate to help Main_hero with the adventure if he has a compass",
+    "Title_Generic": "Pozyskanie wiedzy fabularnej",
+    "Description": "Main_hero akceptuje misje poprzez przekonanie pirata ze ma wystarczajace wyposazenie do realizacji zadania",
+    "L_Side": {
+        "Locations": [
+            {
+                "Id": "Everywhere",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": [
+                            {
+                                "Name": "Kompas",
+                                "Attributes": {
+                                }
+                            }
+                        ],
+                        "Narration": [
+                            {
+                                "Name": "PirateQuestStartActive",
+                                "Id": "PirateQuestStartActive",
+                                "Attributes": {
+                                    "IsActive": true,
+                                    "Knowledge": "Pirat potrzebuje kogoś do odnalezienia skarbu, możesz go przekonac za pomoca kompasu"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Attributes": {},
+                        "Characters": [],
+                        "Items": []
+                    }
+                ],
+                "Items": [],
+                "Connections": []
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestBoatSubQuestActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat poprosił Cie o odnalezienie łodzi w jaskinii"
+                }
+            }
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestStartActive"
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Spotkanie potwora w jaskinii przez bohatera / Meeting the monster in the cave by the hero",
+    "Title_Generic": "Stworzenie obiektu z wiedzy fabularnej",
+    "Description": "Pojawienie sie bohatera tworzy smoka i łódź w jaskinii.",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Cave",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": [],
+                        "Narration": [
+                            {
+                                "Name": "PirateQuestBoatSubQuestActive",
+                                "Id": "PirateQuestBoatSubQuestActive",
+                                "Attributes": {
+                                    "IsActive": true
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "Items": []
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "in": "Cave/Characters",
+            "node": {
+                "Name": "Dragon"
+            }
+        },
+        {
+            "op": "create",
+            "in": "Cave/Items",
+            "node": {
+                "Name": "Boat"
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Odblokowanie wyspy przez bohatera / Unlocking the island by the hero",
+    "Title_Generic": "Dodawanie/usuwanie krawedzi",
+    "Description": "Poniewaz bohater posiada lodz jest w stanie dostac sie na wyspe",
+    "L_Side": {
+        "Locations": [
+            {
+                "Id": "Everywhere",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": [
+                            {
+                                "Name": "Boat",
+                                "Attributes": {
+                                }
+                            }
+                        ],
+                        "Narration": [
+                            {
+                                "Name": "PirateQuestBoatSubQuestActive",
+                                "Id": "PirateQuestBoatSubQuestActive",
+                                "Attributes": {
+                                    "IsActive": true
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "Items": [],
+                "Connections": [
+                ]
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "comment": "Jak dodaje sie polaczenia pomiedzy lokacjami"
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestBoatSubQuestActive",
+                "Attributes": {
+                    "IsActive": true
+                }
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Wykopanie skarbu przez bohatera / Digging up the trasure",
+    "Title_Generic": "Stworzenie obiektu z wiedzy fabularnej",
+    "Description": "Na wyspie pojawia sie skarb i pirat",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    }
+                ],
+                "Items": []
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "create",
+            "in": "Island/Items",
+            "node": {
+                "Name": "Treasure"
+            }
+        },
+        {
+            "op": "move",
+            "node": "Pirate",
+            "to": "Island/Characters"
+        },
+        {
+            "op": "create",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Odnajdz skarb na wyspie"
+                }
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Poddanie się przez bohatera / Giving up",
+    "Title_Generic": "Wykonanie czasochłonnego zadania",
+    "Description": "Bohater kapituluje, oddając piratowi skarb.",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
+                "Items": []
+            }
+        ],
+        "Narration": [
+            {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true
+                }
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Konfrontacja bohatera z piratem / Confrontation of the hero with the pirate",
+    "Title_Generic": "Pozyskanie wiedzy fabularnej",
+    "Description": "Bohater zamiast poddać się, wybiera konfrontację z piratem",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
+                "Items": []
+            }
+        ],
+        "Narration": [
+            {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true
+                }
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "set",
+            "in": "Main_hero/Narration",
+            "attribute": "PirateQuestTresureSubQuestActive.Knowledge",
+            "value": "Pirat chce zabrać cały skarb dla siebie"
+        }
+    ]
+  },
+  {
+    "Title": "Zabicie pirata / Killing the pirate",
+    "Title_Generic": "Walka (śmierć atakowanego)",
+    "Description": "Bohater zabija pirata i otrzymuje 100% skarbu.",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
+                "Items": []
+            }
+        ],
+        "Narration": [
+            {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
+                }
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "delete",
+            "node": "Pirate"
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Wymiana papugi na skarb / Exchanging the parrot for the treasure",
+    "Title_Generic": "Wymiana przedmiotu na za wiedzę fabularną",
+    "Description": "Bohater wymienia porwaną papugę Zosię i jako okup otrzymuje 100% skarbu",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": [
+                            {
+                                "Id": "Parrot"
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
+                "Items": []
+            }
+        ],
+        "Narration": [
+            {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
+                }
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "move",
+            "node": "Parrot",
+            "to": "Characters/Pirate/Items"
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Dogadanie się z piratem / Agreement with the pirate",
+    "Title_Generic": "Wykonanie czasochłonnego zadania",
+    "Description": "Bohater dogaduje się z piratem i otrzymuje 50% skarbu.",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
+                "Items": []
+            }
+        ],
+        "Narration": [
+            {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
+                }
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "set",
+            "attribute": "Treasure.coins",
+            "value": 0
+        },
+        {
+            "op": "add",
+            "attribute": "Pirate.Money",
+            "value": 5
+        },
+        {
+            "op": "add",
+            "attribute": "Main_hero.Money",
+            "value": 5
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
+  },
+  {
+    "Title": "Zabicie bohatera przez pirata / Killing of the hero by the pirate",
+    "Title_Generic": "Walka (śmierć atakującego)",
+    "Description": "Pirat zabija bohatera i otrzymuje 100% skarbu.",
+    "L_Side": {
+        "Locations": [
+            {
+                "Name": "Island",
+                "Attributes": {},
+                "Characters": [
+                    {
+                        "Name": "Main_hero",
+                        "Items": []
+                    },
+                    {
+                        "Name": "Pirate",
+                        "Items": []
+                    }
+                ],
+                "Items": []
+            }
+        ],
+        "Narration": [
+            {
+                "Name": "PirateQuestTreasureSubQuestActive",
+                "Id": "PirateQuestTreasureSubQuestActive",
+                "Attributes": {
+                    "IsActive": true,
+                    "Knowledge": "Pirat chce zabrać cały skarb dla siebie"
+                }
+            }
+        ]
+    },
+    "R_Side": {},
+    "Instructions": [
+        {
+            "op": "delete",
+            "node": "Main_hero"
+        },
+        {
+            "op": "delete",
+            "in": "Main_hero/Narration",
+            "node": {
+                "Name": "PirateQuestTresureSubQuestActive"
+            }
+        }
+    ]
+  }
+]
