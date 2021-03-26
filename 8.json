@@ -1,6 +1,6 @@
 {
-    "Title": "Zabicie pirata",
-    "Title_Generic": "",
+    "Title": "Zabicie pirata / Killing the pirate",
+    "Title_Generic": "Walka (śmierć atakowanego)",
     "Description": "Bohater zabija pirata i otrzymuje 100% skarbu.",
     "L_Side": {
         "Locations": [
